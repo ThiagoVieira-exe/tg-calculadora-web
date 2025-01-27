@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculadora TG</title>
+  </head>
+  <body>
+    <header>
+      <h1>Calculadora TG</h1>
+    </header>
+    <main>
+      <div id="container">
+        <div id="select-box">
+          <label for="select-options">Selecione o tipo de trabalho:</label>
+          <select id="select-options">
+            <option disabled selected>Tipo de Trabalho</option>
+            <option value="adesivos">Adesivos</option>
+            <option value="etiquetas">Etiquetas</option>
+            <option value="cartao">Cartão Personalizado</option>
+            <option value="folhetos">Folhetos</option>
+          </select>
+        </div>
+        <div id="container-inputs">
+          <div class="div-input">
+            <label for="custo-folha">Custo por folha:</label>
+            <input type="number" id="custo-folha" placeholder="Exemplo: 0.50" />
+          </div>
+          <div class="div-input">
+            <label for="quant-folhas">Quantidade de folhas:</label>
+            <input type="number" id="quant-folhas" placeholder="Exemplo: 10" />
+          </div>
+
+          <button onclick="calcular()">Calcular</button>
+        </div>
+        <h2 id="valor-de-direta">
+          Venda Direta: <span id="venda-direta">0,00</span>
+        </h2>
+        <h2 id="valor-de-shopee">
+          Venda Shopee: <span id="venda-shopee">0,00</span>
+        </h2>
+      </div>
+    </main>
+    <footer>
+      <h3>
+        Copyright &copy; TG Gráfica Personalizada - 2025 | Todos os direitos são
+        reservados.
+      </h3>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
