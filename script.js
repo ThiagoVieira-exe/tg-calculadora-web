@@ -12,7 +12,7 @@ function calcular() {
 
   function atribuirPrecos(extra) {
     let base = (custoFolha * quantFolha + extra) * 3 + 4;
-    if (quantFolha >= 15) {
+    if (quantFolha >= 15 && tipoTrabalho !== 'folhetos') {
       base += quantFolha / 5;
     }
     calculoDireta = base;
