@@ -16,8 +16,7 @@ body {
   background-color: #e6e6e6;
 }
 
-header,
-footer {
+header {
   height: 100px;
   display: flex;
   justify-content: center;
@@ -85,12 +84,14 @@ button:hover {
 
 footer {
   width: 90%;
-  text-align: center;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer h3 {
   font-size: 13px;
   font-weight: 300;
   word-wrap: break-word;
-  margin-top: 50px;
 }
