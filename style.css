@@ -1,9 +1,11 @@
+/* Reset de estilos */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilos gerais */
 body {
   height: 100vh;
   min-width: 325px;
@@ -16,17 +18,27 @@ body {
   background-color: #e6e6e6;
 }
 
+/* Header */
 header {
   height: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+/* Main */
 main {
   height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0.5rem auto;
+  gap: 0.8rem;
+  line-height: 10px;
 }
 
-main,
+/* Containers principais */
 #container,
 #select-box,
 .div-input,
@@ -37,11 +49,11 @@ main,
   justify-content: flex-start;
   margin: 0.5rem auto;
   gap: 0.8rem;
-  line-height: 10px;
 }
 
+/* Estilos do select */
 #select-box label,
-#select-box #select-options {
+.div-input label {
   font-family: "Poppins", serif;
   font-weight: 500;
 }
@@ -53,26 +65,24 @@ main,
   text-align: center;
 }
 
-.div-input label {
-  font-weight: 500;
-}
-
+/* Estilos dos inputs */
 .div-input input {
   border-radius: 10px;
   text-align: center;
   height: 28px;
   width: 130px;
-  border: 1px solid #000000;
+  border: 1px solid #000;
 }
 
+/* Botões */
 button {
   border: none;
   padding: 10px 15px;
   border-radius: 25px;
   color: #fff;
   background-color: #797979;
-  border: none;
   font-family: "Poppins", serif;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -80,8 +90,9 @@ button:hover {
   cursor: pointer;
 }
 
+/* Output do preço */
 .output-preco {
-  margin: 15px 0 8px 0;
+  margin: 15px 0 8px;
 }
 
 .output-preco h2 {
@@ -89,6 +100,7 @@ button:hover {
   font-size: 28px;
 }
 
+/* Footer */
 footer {
   width: 90%;
   height: 10%;
