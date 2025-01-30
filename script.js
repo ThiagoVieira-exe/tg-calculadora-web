@@ -20,12 +20,13 @@ function calcular() {
   }
 
   function calcularPreco() {
-    if (tipoTrabalho === 'etiquetas' || tipoTrabalho === 'cartao-personalizado') {
+    if (
+      tipoTrabalho === 'etiquetas' ||
+      tipoTrabalho === 'cartao-personalizado' ||
+      tipoTrabalho === 'adesivos') {
       atribuirPrecos(custoFolha < 0.7 ? 3 : 4);
-    } else if (tipoTrabalho === 'adesivos') {
-      atribuirPrecos(quantFolha < 7 ? 2 : 4);
     } else if (tipoTrabalho === 'folhetos') {
-      atribuirPrecos(0);
+      atribuirPrecos(1);
     } else if (tipoTrabalho === 'cartao-offset180g') {
       atribuirPrecos(custoFolha < 0.4 ? 2 : 3);
     }
