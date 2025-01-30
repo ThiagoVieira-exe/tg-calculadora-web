@@ -24,7 +24,7 @@ function calcular() {
       tipoTrabalho === 'etiquetas' ||
       tipoTrabalho === 'cartao-personalizado' ||
       tipoTrabalho === 'adesivos') {
-      atribuirPrecos(custoFolha < 0.7 ? 3 : 4);
+      atribuirPrecos(custoFolha < 0.6 ? 3 : 4);
     } else if (tipoTrabalho === 'folhetos') {
       atribuirPrecos(1);
     } else if (tipoTrabalho === 'cartao-offset180g') {
