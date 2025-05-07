@@ -29,6 +29,8 @@ function calcular() {
       atribuirPrecos(1);
     } else if (tipoTrabalho === 'cartao-offset180g') {
       atribuirPrecos(custoFolha < 0.4 ? 2 : 3);
+    } else if (tipoTrabalho === 'cartao-visita') {
+      atribuirPrecos(custoFolha <= 0.6 ? 2 : 3)
     }
 
     vendaDireta.innerHTML = Math.round(calculoDireta).toString() + ',00';
