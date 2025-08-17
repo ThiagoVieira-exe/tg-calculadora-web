@@ -14,7 +14,7 @@ function calcular() {
     if (quantFolha >= 15 && tipoTrabalho !== "folhetos") {
       base += quantFolha / 5;
     }
-    calculoDireta = base * 1.15; // Adicional de 15% da loja
+    calculoDireta = (base + 2) * 1.12; // Adicional de 2,00 + 12% da Loja
     calculoShopee = (base + 4) * 1.25; // Adicional de 4,00 + 25% da Shopee
   }
 
