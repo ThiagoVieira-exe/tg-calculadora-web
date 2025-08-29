@@ -45,6 +45,7 @@ main {
 /* Containers principais */
 #container,
 #select-box,
+#select-box-multiplicador,
 .div-input,
 #container-inputs {
   display: flex;
@@ -90,11 +91,16 @@ main {
   font-weight: 500;
 }
 
-#select-box #select-options {
+#select-box #select-options,
+#select-options-multiplicador {
   border-radius: 10px;
   height: 30px;
   width: 200px;
   text-align: center;
+}
+
+#select-options-multiplicador {
+  width: 100px;
 }
 
 /* Estilos dos inputs */

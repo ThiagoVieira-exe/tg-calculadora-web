@@ -2,6 +2,9 @@ function calcular() {
   const tipoTrabalho = document.getElementById("select-options").value;
   const custoFolha = Number(document.getElementById("custo-folha").value);
   const quantFolha = Number(document.getElementById("quant-folhas").value);
+  const multiplicador = Number(
+    document.getElementById("select-options-multiplicador").value
+  );
 
   const vendaDireta = document.getElementById("venda-direta");
   const vendaShopee = document.getElementById("venda-shopee");
@@ -10,12 +13,15 @@ function calcular() {
   let calculoShopee = 0;
 
   function atribuirPrecos(extra) {
-    let base = (custoFolha * quantFolha + extra) * 3;
+    let custoBase = custoFolha * quantFolha + extra;
+    let base = custoBase * multiplicador;
+
     if (quantFolha >= 15 && tipoTrabalho !== "folhetos") {
       base += quantFolha / 5;
     }
-    calculoDireta = (base + 2) * 1.12; // Adicional de 2,00 + 12% da Loja
-    calculoShopee = (base + 4) * 1.25; // Adicional de 4,00 + 25% da Shopee
+
+    calculoDireta = (base + 2) * 1.15; // Loja: +2,00 +15%
+    calculoShopee = (base + 4) * 1.25; // Shopee: +4,00 +25%
   }
 
   function calcularPreco() {
